@@ -2,7 +2,7 @@
 
 This project demonstrates how to deploy an update to a contract that used `OpenZeppelinTransparentProxy` via a `ProxyAdmin` contract where the deploying account is not the owner of the `ProxyAdmin` contract.
 
-# Step 1: Deploy all the contracts
+## Step 1: Deploy all the contracts
 
 In a terminal start a hardhat node with the no deploy option, we will use this local network to deploy our contract and then perform an upgrade.
 
@@ -27,6 +27,8 @@ deploying "HelloWorld_Proxy" (tx: 0xff9294215a4a9539b2c96fa7d2e83151cec6cbb8ff67
 Changing owner of DefaultProxyAdmin after first deploy
 Done in 4.36s.
 ```
+
+## Step 2: Upgrade the contract implementation
 
 Now in order to update this deployment we need to change the `HelloWorld` contract so hardhat-deploy knows it needs to be updated. In our case we can simply change the string returned from the `greet` function.
 
